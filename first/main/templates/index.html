@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href={% static '/css/chat.css' %}>
+    <link rel="stylesheet" href={% static '/css/style.css' %}>
+    <link rel="stylesheet" href={% static '/css/typing.css' %}>
+    <title>Chatbox</title>
+</head>
+<body>
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img  class='header-image' src={% static "/images/image.png"%} alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h3 class="chatbox__heading--header">Chat support</h3>
+                        <p class="chatbox__description--header">There are many variations of passages of Lorem Ipsum available</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div>
+                        <div class="messages__item messages__item--operator">
+                            Can you let me talk to the support?
+                        </div>
+                        <div class="messages__item messages__item--visitor">
+                            Sure!
+                        </div>
+                        <div class="messages__item messages__item--operator">
+                            Need your help, I need a developer in my site.
+                        </div>
+                        <div class="messages__item messages__item--visitor">
+                            Hi... What is it? I'm a developer, yay!
+                        </div>
+                        <div class="messages__item messages__item--operator">
+                            so nd so my problem
+                        </div>
+                        <!-- <div class="messages__item messages__item--typing">
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" id='mytext' placeholder="Write a message...">
+                    <button class="chatbox__send--footer"><b>send</b></button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button type="submit"></button>
+            </div>
+        </div>
+    </div>
+    <script src={% static '/js/chat.js' %}></script>
+    <script src={% static '/js/app.js' %}></script>
+</body>
+</html>
